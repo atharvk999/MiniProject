@@ -1,0 +1,389 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+    <title>Students Details</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Page Description Here" />
+    <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="app">
+    <form name="PersonalDetails" action="page1.php" method="post">
+
+
+        <center>
+            <h1><u>STUDENTS COUNSELING</u></h1>
+        </center>
+        <center>
+            <table width="70%" border="0" cellspacing="0" cellpadding="11">
+                <tr>
+                    <td colspan="2" align="center">
+                        <h2><u>Personal Details</u></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Name of the Student:</td>
+                    <td>
+                        <input type="text" name="ST" maxlength="60">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Branch:</td>
+                    <td>
+                        <select name="branch">
+                            <option value="CS">CSE</option>
+                            <option value="ME">Mechanical Engineering</option>
+                            <option value="AE">Aeronautical Engineering</option>
+                            <option value="EE">Electrical Engineering</option>
+                            <option value="AU">Automobile Engineering</option>
+                            <option value="CE">Civil Engineering</option>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Roll No.:</td>
+                    <td>
+                        <input type="text" name="RN" maxlength="4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>PRN No.:</td>
+                    <td>
+                        <input type="text" name="PN" maxlength="8">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Guradian's Name:</td>
+                    <td>
+                        <input type="text" name="GN" maxlength="60">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Guardian's Occupation:</td>
+                    <td>
+                        <input type="text" name="GO" maxlength="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Admission Type:</td>
+                    <td>
+                        <input type="radio" name="astatus" value="capround">CAP Round
+                        <input type="radio" name="astatus" value="management">Management
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td>
+                        <input type="date" id="birthday" name="birthday">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>Blood Group:</td>
+                    <td>
+                        <input type="text" name="bloodgroup" maxlength="5">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mother Tounge:</td>
+                    <td>
+                        <input type="text" name="MT" maxlength="10">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Year of Admission:</td>
+                    <td>
+                        <input type="number" placeholder="YYYY" min="2015" maxlength="4">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aadhar No.:</td>
+                    <td>
+                        <input type="text" name="AN" maxlength="12">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Staying With:</td>
+                    <td>
+                        <input type="radio" name="rstatus" value="parents">Parents
+                        <input type="radio" name="rstatus" value="guardians">Guardians
+                        <input type="radio" name="rstatus" value="hostel">Hostel
+
+                    </td>
+                </tr>
+                <tr>
+
+                    <td colspan="2" align="center">
+                        <input type="submit" name="submit1" value="Submit">
+                        <input type="reset" name="reset1" value="Reset">
+                    </td>
+                </tr>
+
+            </table>
+
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <div style="overflow:auto">
+                <center>
+                    <table width="70%" border="1" cellspacing="1" cellpadding="10">
+                        <tr>
+                            <td colspan="5" align="center">
+                                <h2><u>Earlier Education History<u></h2>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Year</td>
+                            <td>Marks(%)</td>
+                            <td>Medium</td>
+                            <td>Place of Study</td>
+
+                        </tr>
+                        <tr>
+                            <td>SSC</td>
+                            <td>
+                                <input type="number" name="sscy" placeholder="YYYY" min="2015" max="2025">
+                                <script>
+                                    document.querySelector("input[type=number]")
+                                        .oninput = e => console.log(new Date(e.target.valueAsNumber, 0, 1))
+                                </script>
+                            </td>
+                            <td>
+                                <input type="number" name="sscm" maxlength="6">
+                            </td>
+                            <td>
+                                <input type="text" name="sscl" maxlength="10">
+                            </td>
+                            <td>
+                                <input type="text" name="sscp" maxlength="20">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>HSC</td>
+                            <td>
+                                <input type="number" name="hscy" placeholder="YYYY" min="2015" max="2025">
+
+                            </td>
+                            <td>
+                                <input type="number" name="hscm" maxlength="6">
+                            </td>
+                            <td>
+                                <input type="text" name="hscl" maxlength="10">
+                            </td>
+                            <td>
+                                <input type="text" name="hscp" maxlength="20">
+                            </td>
+
+
+                        </tr>
+
+                        <tr>
+                            <td>Diploma</td>
+                            <td>
+                                <input type="number" name="dipy" placeholder="YYYY" min="2015" max="2025">
+                                <script>
+                                    document.querySelector("input[type=number]")
+                                        .oninput = e => console.log(new Date(e.target.valueAsNumber, 0, 1))
+                                </script>
+                            </td>
+                            <td>
+                                <input type="number" name="dipm" maxlength="6">
+                            </td>
+                            <td>
+                                <input type="text" name="dipl" maxlength="10">
+                            </td>
+                            <td>
+                                <input type="text" name="dipp" maxlength="20">
+                            </td>
+
+
+                        </tr>
+
+                        <tr>
+                            <td>Others</td>
+                            <td>
+                                <input type="number" name="oty" placeholder="YYYY" min="2015" max="2025">
+                                <script>
+                                    document.querySelector("input[type=number]")
+                                        .oninput = e => console.log(new Date(e.target.valueAsNumber, 0, 1))
+                                </script>
+                            </td>
+                            <td>
+                                <input type="number" name="otm" maxlength="6">
+                            </td>
+                            <td>
+                                <input type="text" name="otl" maxlength="10">
+                            </td>
+                            <td>
+                                <input type="text" name="otp" maxlength="20">
+                            </td>
+
+
+                        </tr>
+                        <tr>
+                            <td colspan="5" align="center">
+                                <input type="submit" name="submit1" value="Submit">
+                                <input type="reset" name="reset1" value="Reset">
+                            </td>
+                        </tr>
+
+
+                    </table>
+            </div>>
+    </form>
+    </center>
+    <h1 class="text-center"><u>Student Counseling</u></h1>
+
+
+    <div class="app-content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-12 p-5">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="name_of_student" class="form-label">Name of the Student</label>
+                            <input type="text" name="name_of_student" class="form-control" id="name_of_student">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="branch" class="form-label">Branch</label>
+                            <select class="form-select" name="branch">
+                                <option selected>Select Branch</option>
+                                <option value="cse">Computer Science and Engineering</option>
+                                <option value="mech">Mechanical Engineering</option>
+                                <option value="aero">Aeronautical Engineering</option>
+                                <option value="electrical">Electrical Engineering</option>
+                                <option value="auto">Automobile Engineering</option>
+                                <option value="civil">Civil Engineering</option>
+                                <option value="food">Food Technology</option>
+                            </select>
+                        </div>
+            
+                        <div class="col-md-6">
+                            <label for="roll_no" class="form-label">Roll No.</label>
+                            <input type="number" name="roll_no" class="form-control" id="roll_no" maxlength="4">
+                        </div>
+            
+                        <div class="col-md-6">
+                            <label for="prn_no" class="form-label">PRN No.</label>
+                            <input type="number" name="prn_no" class="form-control" id="prn_no" maxlength="8">
+                        </div>
+            
+            
+                        <div class="col-md-6">
+                            <label for="name_of_guardian" class="form-label">Guardian's Name</label>
+                            <input type="text" name="name_of_guardian" class="form-control" id="name_of_guardian">
+                        </div>
+            
+            
+                        <div class="col-md-6">
+                            <label for="guardian_occupation" class="form-label">Guardian's Occupation</label>
+                            <input type="text" name="guardian_occupation" class="form-control" id="guardian_occupation">
+                        </div>
+            
+            
+                        <div class="col-md-6">
+                            <label for="admission_type" class="form-label">Admission Type</label>
+                            <div class="col-12">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="admission_type" id="admission_type1"
+                                        value="cap" checked>
+                                    <label class="form-check-label" for="admission_type1">CAP</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="admission_type" id="admission_type2"
+                                        value="management">
+                                    <label class="form-check-label" for="admission_type2">Management</label>
+                                </div>
+                            </div>
+            
+                        </div>
+            
+                        <div class="col-md-6">
+                            <label for="date_of_birth" class="form-label">Date of Birth</label>
+                            <input type="date" name="date_of_birth" class="form-control" id="date_of_birth">
+            
+                        </div>
+            
+            
+            
+                        <div class="col-md-6">
+                            <label for="blood_group" class="form-label">Blood Group</label>
+                            <input type="text" name="blood_group" class="form-control" id="blood_group">
+                        </div>
+            
+                        <div class="col-md-6">
+                            <label for="mother_tongue" class="form-label">Mother Tongue</label>
+                            <input type="text" name="mother_tongue" class="form-control" id="mother_tongue">
+                        </div>
+            
+                        <div class="col-md-6">
+                            <label for="year_of_admission" class="form-label">Year of admission</label>
+                            <input type="number" placeholder="YYYY" name="year_of_admission" class="form-control"
+                                id="year_of_admission" min="2015" maxlength="4">
+                        </div>
+            
+            
+                        <div class="col-md-6">
+                            <label for="aadhar_no" class="form-label">Aadhar No.</label>
+                            <input type="number" name="aadhar_no" class="form-control" id="aadhar_no" maxlength="12">
+                        </div>
+            
+                        <div class="col-md-6">
+                            <label for="staying_with" class="form-label">Staying With</label>
+                            <p></p>
+            
+                            <input class="form-check-input" type="radio" name="staying_with" id="staying_with" checked>
+                            Parents
+                            </label>
+                            <p></p>
+                            <input class="form-check-input" type="radio" name="staying_with" id="staying_with">
+            
+                            Guardians
+                            </label>
+                            <p></p>
+                            <input class="form-check-input" type="radio" name="staying_with" id="staying_with">
+            
+                            Hostel
+                            </label>
+                        </div>
+            
+            
+                        <div class="col-12 mt-5">
+                            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                            <button type="reset" class="btn btn-primary">Reset</button>
+                        </div>
+            
+            
+            
+            
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

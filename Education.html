@@ -1,0 +1,162 @@
+<!doctype html>
+
+<head>
+
+    <title>Education Details</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Page Description Here" />
+    <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <form name="Educational Details" action="page2.php" method="post">
+        <center>
+            <table width="70%" border="1" cellspacing="1" cellpadding="10">
+                <tr>
+                    <td colspan="5" align="center">
+                        <h2><u>Earlier Education History<u></h2>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Year</td>
+                    <td>Marks(%)</td>
+                    <td>Medium</td>
+                    <td>Place of Study</td>
+
+                </tr>
+                <tr>
+                    <td>SSC</td>
+                    <td>
+                        <input type="number" name="sscy" placeholder="YYYY" min="2015" max="2025">
+                        <script>
+                            document.querySelector("input[type=number]")
+                                .oninput = e => console.log(new Date(e.target.valueAsNumber, 0, 1))
+                        </script>
+                    </td>
+                    <td>
+                        <input type="number" name="sscm" maxlength="6">
+                    </td>
+                    <td>
+                        <input type="text" name="sscl" maxlength="10">
+                    </td>
+                    <td>
+                        <input type="text" name="sscp" maxlength="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td>HSC</td>
+                    <td>
+                        <input type="number" name="hscy" placeholder="YYYY" min="2015" max="2025">
+                        <script>
+                            document.querySelector("input[type=number]")
+                                .oninput = e => console.log(new Date(e.target.valueAsNumber, 0, 1))
+                        </script>
+                    </td>
+                    <td>
+                        <input type="number" name="hscm" maxlength="6">
+                    </td>
+                    <td>
+                        <input type="text" name="hscl" maxlength="10">
+                    </td>
+                    <td>
+                        <input type="text" name="hscp" maxlength="20">
+                    </td>
+
+
+                </tr>
+
+                <tr>
+                    <td>Diploma</td>
+                    <td>
+                        <input type="number" name="dipy" placeholder="YYYY" min="2015" max="2025">
+                        <script>
+                            document.querySelector("input[type=number]")
+                                .oninput = e => console.log(new Date(e.target.valueAsNumber, 0, 1))
+                        </script>
+                    </td>
+                    <td>
+                        <input type="number" name="dipm" maxlength="6">
+                    </td>
+                    <td>
+                        <input type="text" name="dipl" maxlength="10">
+                    </td>
+                    <td>
+                        <input type="text" name="dipp" maxlength="20">
+                    </td>
+
+
+                </tr>
+
+                <tr>
+                    <td>Others</td>
+                    <td>
+                        <input type="number" name="oty" placeholder="YYYY" min="2015" max="2025">
+                        <script>
+                            document.querySelector("input[type=number]")
+                                .oninput = e => console.log(new Date(e.target.valueAsNumber, 0, 1))
+                        </script>
+                    </td>
+                    <td>
+                        <input type="number" name="otm" maxlength="6">
+                    </td>
+                    <td>
+                        <input type="text" name="otl" maxlength="10">
+                    </td>
+                    <td>
+                        <input type="text" name="otp" maxlength="20">
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td colspan="5" align="center">
+                        <input type="submit" name="submit1" value="Submit">
+                        <input type="reset" name="reset1" value="Reset">
+                    </td>
+                </tr>
+
+
+            </table>
+    </form>
+    </center>
+
+
+</body>
+<style>
+    body {
+        background-color: lightblue;
+    }
+
+    table {
+        background-color: rgb(245, 231, 195);
+    }
+
+    input {
+        background-color: lightgoldenrodyellow;
+    }
+
+    input[type="submit"] {
+        width: 30%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 4px 4px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type="reset"] {
+        width: 30%;
+        background-color: red;
+        color: white;
+        padding: 4px 4px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+</style>
